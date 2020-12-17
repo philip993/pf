@@ -1,17 +1,21 @@
-import Layout from "../components/Layout/Layout";
-import styles from "../styles/about.module.scss";
-import { Avatar, Button } from "@material-ui/core";
-import Link from "next/link";
+import Layout from '../components/Layout/Layout';
+import styles from '../styles/about.module.scss';
+import { Avatar, Button } from '@material-ui/core';
+import Link from 'next/link';
 
 const About = () => (
   <div className={styles.about}>
-    <Layout />
+    <Layout className={styles.t} />
     <header className={styles.header}>
       <h1>About Me</h1>
     </header>
     <div className={styles.body}>
       <section>
-        <Avatar className={styles.avatar} alt="profie" />
+        <Avatar
+          className={styles.avatar}
+          alt="profie"
+          src={require('../public/pf.png')}
+        />
         <span>
           <h2>BIO</h2>
           <p>
