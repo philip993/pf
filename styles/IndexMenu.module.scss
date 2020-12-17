@@ -1,0 +1,136 @@
+.iMenu {
+  height: 100%;
+  width: 100%;
+
+  .indexMenu {
+    position: relative;
+    width: 50%;
+    margin-top: -2%;
+
+    h1 {
+      font-size: 5rem;
+      //   color: #1d777a;
+      color: #2b2d2f;
+      padding-left: 5%;
+      padding-top: 5%;
+    }
+
+    h4 {
+      margin-top: -20px;
+      font-size: 2rem;
+      color: #1d777a;
+      padding-left: 5%;
+    }
+  }
+
+  .indexIcons {
+    margin: auto;
+    color: #fff;
+    position: relative;
+    margin-left: 5%;
+
+    a {
+      margin: auto;
+    }
+
+    .fbIcon,
+    .linkedIcon,
+    .gitIcon {
+      color: #fff;
+
+      &:hover {
+        // box-shadow: 0px 0px 10px #fff;
+        color: #1d777a;
+        background: transparent;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1240px) {
+  .indexMenu {
+    width: 50%;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h4 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .indexIcons {
+    margin-left: 2%;
+    margin-top: -20px;
+
+    .fbIcon,
+    .linkedIcon,
+    .gitIcon {
+      width: auto;
+    }
+  }
+}
+
+@media all and (max-width: 770px) {
+  .iMenu {
+    width: 100%;
+    .indexMenu {
+      width: 40%;
+
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      h4 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .indexIcons {
+    margin-left: 2%;
+    margin-top: -20px;
+
+    .fbIcon,
+    .linkedIcon,
+    .gitIcon {
+      width: 25px;
+    }
+  }
+
+  .footer {
+    h6 {
+      font-size: 1rem;
+      margin-top: -30px;
+    }
+  }
+}
+
+@media all and (max-width: 520px) {
+  .iMenu {
+    width: 100%;
+    .indexMenu {
+      width: 80%;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+    }
+
+    .indexIcons {
+      margin-left: 2%;
+      margin-top: -20px;
+
+      .fbIcon,
+      .linkedIcon,
+      .gitIcon {
+        width: 20px;
+      }
+    }
+  }
+}
