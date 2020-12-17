@@ -37,7 +37,7 @@
 
         &::after {
           display: inline;
-          content: "";
+          content: '';
           border-bottom: solid 3px #019fb6;
           transform: scaleX(0);
           transition: transform 250ms ease-in-out;
