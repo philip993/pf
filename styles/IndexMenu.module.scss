@@ -33,16 +33,34 @@
       margin: auto;
     }
 
-    .fbIcon,
-    .linkedIcon,
-    .gitIcon {
-      color: #fff;
-
+    .indexButton {
       &:hover {
-        // box-shadow: 0px 0px 10px #fff;
-        color: #1d777a;
-        background: transparent;
+        background-color: transparent;
       }
+
+      .fbIcon,
+      .linkedIcon,
+      .gitIcon {
+        color: #fff;
+
+        &:hover {
+          box-shadow: 0px 0px 10px #fff;
+          color: #1d777a;
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    color: #000;
+    width: 100%;
+    text-align: center;
+
+    h6 {
+      margin-top: -20px;
+      font-size: 0.8rem;
     }
   }
 }
