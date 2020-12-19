@@ -2,7 +2,7 @@
   min-height: 100vh;
   width: 100%;
   padding: 0 0.5rem;
-  background-image: url("../public/projects.jpg");
+  background-image: url('../public/projects.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,7 +11,6 @@
   .header {
     h1 {
       font-size: 5rem;
-      // padding: 2%;
       padding-top: 3%;
       padding-left: 8%;
       padding-right: 5%;
@@ -21,128 +20,117 @@
       color: orange;
     }
   }
-}
-
-.body {
-  width: 80%;
-  margin: auto;
-
-  .sectionOne,
-  .sectionTwo {
-    width: 50%;
-    padding: 2%;
-    display: inline-block;
-    margin: auto;
-
-    .card {
-      background-color: #f4f5f4;
-
-      h2 {
-        width: 100%;
-        background-color: darkorange;
-        color: #fff;
-        text-align: center;
-        padding: 2%;
-        margin: auto;
-      }
-
-      .cardSpan {
-        width: 80%;
-        margin: auto;
-        padding: 2%;
-        height: 30vh;
-        h5 {
-          font-size: 1.2rem;
-          font-weight: bold;
-          margin-left: 2%;
-          margin-top: 0;
-        }
-        p {
-          background-color: #f4f5f4;
-          border: none;
-          margin: auto;
-          margin-top: -5%;
-          width: 100%;
-          padding: 2%;
-        }
-      }
-    }
-
-    .btnArea {
-      margin: auto;
-      text-align: center;
-
-      .btn {
-        background-color: #464646;
-        border: 1px solid #fff;
-        color: #fff;
-        font-weight: bold;
-        width: 40%;
-        margin-top: 5%;
-        margin-bottom: 2%;
-
-        &:hover {
-          box-shadow: 0px 0px 10px darkorange;
-          color: darkorange;
-        }
-      }
-    }
-
-    ul {
-      list-style-type: none;
-      columns: 3;
-
-      li {
-        p {
-          margin: auto;
-          float: right;
-          margin-top: 5%;
-        }
-        .images {
-          width: 30px;
-          height: 30px;
-          margin: auto;
-          float: left;
-        }
-      }
-
-      h5 {
-        margin-top: 0px;
-        font-size: 1.2rem;
-      }
-    }
-  }
-}
-
-@media all and (max-width: 770px) {
-  .header {
-    h1 {
-      font-size: 4rem;
-      padding: 2%;
-      margin: 5%;
-    }
-  }
 
   .body {
-    width: 90%;
+    width: 80%;
+    margin: auto;
 
     .sectionOne,
-    .sectionTwo {
+    .sectionTwo,
+    .sectionThree,
+    .sectionFour {
       width: 50%;
+      padding: 2%;
+      display: inline-block;
+      margin: auto;
 
       .card {
-        height: 100%;
-        .cardSpan {
-          min-height: 45vh;
+        background-color: #f4f5f4;
+
+        .cardHeader {
+          display: inline-flex;
+          width: 100%;
+          background-color: darkorange;
+          color: #fff;
+
+          h2 {
+            color: #fff;
+            text-align: left;
+            padding: 2%;
+            margin: auto;
+            margin-left: 5%;
+          }
         }
 
-        ul {
-          columns: 3;
-          font-size: 0.9rem;
+        .content {
+          width: 90%;
+          margin: auto;
 
-          h5 {
-            margin-top: 0px;
-            font-size: 1rem;
+          .cardSpan {
+            width: 100%;
+            margin: auto;
+            padding: 2%;
+            height: 30vh;
+            position: relative;
+
+            p {
+              background-color: #f4f5f4;
+              border: none;
+              margin: auto;
+              width: 100%;
+              padding: 2%;
+            }
+
+            .buttonContainer {
+              z-index: 1300;
+              width: 100%;
+              height: 30vh;
+              position: absolute;
+              margin: auto;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              align-content: center;
+              margin: -2%;
+
+              .btn {
+                visibility: hidden;
+                letter-spacing: 2px;
+                font-weight: bold;
+                background-color: #2b2d2f;
+                color: #fff;
+                opacity: 0;
+              }
+
+              &:hover {
+                visibility: visible;
+                background-color: rgba(#b5b8bb, 0.3);
+
+                .btn {
+                  z-index: 1400;
+                  width: 30%;
+                  height: 15%;
+                  opacity: 1;
+                  visibility: visible;
+                  margin: 5%;
+
+                  &:hover {
+                    box-shadow: 0px 0px 10px #2b2d2f;
+                    background-color: #141516;
+                  }
+                }
+              }
+            }
+          }
+
+          .cardFooter {
+            display: inline-flex;
+            flex-wrap: wrap;
+            width: 100%;
+            min-height: 158px;
+            margin: auto;
+            border-top: 1px solid #b5b8bb;
+
+            .imageContrainer {
+              width: 50%;
+              margin: auto;
+              text-align: center;
+
+              .images {
+                width: 75px;
+                height: 75px;
+              }
+            }
           }
         }
       }
@@ -150,31 +138,201 @@
   }
 }
 
-@media all and (max-width: 520px) {
-  .header {
-    h1 {
-      font-size: 3rem;
-      padding: 2%;
-      margin: 5%;
-    }
-  }
-
-  .body {
-    width: 90%;
-
-    .sectionOne,
-    .sectionTwo {
+// Mobile
+@media all and (max-width: 700px) {
+  .projects {
+    .header {
       width: 100%;
 
-      .card {
-        height: 100%;
-        .cardSpan {
-          min-height: 50vh;
+      h1 {
+        font-size: 3rem;
+        padding: 2%;
+        margin: 5%;
+      }
+    }
+
+    .body {
+      width: 90%;
+
+      .sectionOne,
+      .sectionTwo,
+      .sectionThree,
+      .sectionFour {
+        width: 100%;
+
+        .card {
+          height: 100%;
+
+          .cardHeader {
+            width: 100%;
+
+            h2 {
+              margin-left: 2%;
+              font-size: 1.4rem;
+            }
+          }
+
+          .content {
+            .cardSpan {
+              min-height: 50vh;
+              overflow: scroll;
+
+              .buttonContainer {
+                height: 50vh;
+
+                &:hover {
+                  .btn {
+                    width: 70%;
+                  }
+                }
+              }
+            }
+
+            .cardFooter {
+              .imageContrainer {
+                .images {
+                  width: 45px;
+                  height: 45px;
+                }
+              }
+            }
+          }
         }
       }
+    }
+  }
+}
 
-      ul {
-        padding-left: 2%;
+// Ipad
+@media all and (min-width: 701px) and (max-width: 1280px) {
+  .projects {
+    .header {
+      width: 100%;
+
+      h1 {
+        font-size: 3rem;
+        padding: 2%;
+        margin: 5%;
+      }
+    }
+
+    .body {
+      width: 70%;
+
+      .sectionOne,
+      .sectionTwo,
+      .sectionThree,
+      .sectionFour {
+        width: 100%;
+
+        .card {
+          height: 100%;
+
+          .cardHeader {
+            width: 100%;
+
+            h2 {
+              margin-left: 2%;
+              font-size: 1.4rem;
+            }
+          }
+
+          .content {
+            .cardSpan {
+              min-height: 25vh;
+              overflow: scroll;
+
+              .buttonContainer {
+                height: 25vh;
+
+                &:hover {
+                  .btn {
+                    width: 40%;
+                  }
+                }
+              }
+            }
+
+            .cardFooter {
+              .imageContrainer {
+                .images {
+                  width: 55px;
+                  height: 55px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// FHD +
+
+@media all and (min-width: 1801px) {
+  .projects {
+    .header {
+      width: 100%;
+
+      h1 {
+        font-size: 6rem;
+        margin-bottom: 2%;
+      }
+    }
+
+    .body {
+      width: 70%;
+      margin: auto;
+
+      .sectionOne,
+      .sectionTwo,
+      .sectionThree,
+      .sectionFour {
+        width: 50%;
+
+        .card {
+          height: 100%;
+
+          .cardHeader {
+            width: 100%;
+
+            h2 {
+              margin: 2%;
+              font-size: 1.5rem;
+            }
+          }
+
+          .content {
+            .cardSpan {
+              height: 30vh;
+              overflow: auto;
+
+              p {
+                font-size: 1.1rem;
+              }
+
+              .buttonContainer {
+                height: 30vh;
+
+                &:hover {
+                  .btn {
+                    width: 30%;
+                  }
+                }
+              }
+            }
+
+            .cardFooter {
+              .imageContrainer {
+                .images {
+                  width: 75px;
+                  height: 75px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
