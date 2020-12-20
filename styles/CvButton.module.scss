@@ -1,0 +1,25 @@
+.cvButton {
+  width: 50%;
+  background-color: #ec9706;
+
+  a {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    width: 100%;
+    background-color: rgba(#2b2d2f, 0.7);
+    border: 1px solid #fff;
+
+    &:hover {
+      box-shadow: 0px 0px 10px #ec9706;
+      background-color: rgba(#3d4042, 0.7);
+    }
+  }
+}
+
+@media all and (max-width: 780px) {
+  .cvButton {
+    width: 70%;
+  }
+}
