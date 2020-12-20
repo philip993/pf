@@ -6,11 +6,11 @@ import {
   List,
   ListItem,
   IconButton,
-} from "@material-ui/core";
-import Link from "next/link";
-import styles from "../../styles/Navbar.module.scss";
-import { useState } from "react";
-import MenuIcon from "@material-ui/icons/Menu";
+} from '@material-ui/core';
+import Link from 'next/link';
+import styles from '../../styles/Navbar.module.scss';
+import { useState } from 'react';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <AppBar
       className={styles.appBar}
-      style={{ background: "transparent", boxShadow: "none" }}
+      style={{ background: 'transparent', boxShadow: 'none' }}
       position="static"
     >
       <Toolbar className={styles.toolbar}>
