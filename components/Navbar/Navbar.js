@@ -2,15 +2,17 @@ import {
   AppBar,
   Toolbar,
   Drawer,
-  Button,
   List,
   ListItem,
   IconButton,
-} from '@material-ui/core';
-import Link from 'next/link';
-import styles from '../../styles/Navbar.module.scss';
-import { useState } from 'react';
-import MenuIcon from '@material-ui/icons/Menu';
+} from "@material-ui/core";
+import Link from "next/link";
+import styles from "../../styles/Navbar.module.scss";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import MenuIcon from "@material-ui/icons/Menu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,31 +22,38 @@ const Navbar = () => {
   const handleDrawerClose = () => {
     setIsOpen(false);
   };
+  const router = useRouter();
   return (
     <AppBar
       className={styles.appBar}
-      style={{ background: 'transparent', boxShadow: 'none' }}
+      style={{ background: "transparent", boxShadow: "none" }}
       position="static"
     >
       <Toolbar className={styles.toolbar}>
         <div className={styles.left}>
           <Link href="/">
-            <a>FM</a>
+            <a className={router.pathname === "/" ? styles.active : ""}>FM</a>
           </Link>
         </div>
 
         <div className={styles.right}>
-          <Link href="/about" className={styles.link}>
-            <a>About Me</a>
+          <Link href="/about">
+            <a className={router.pathname === "/about" ? styles.active : ""}>
+              About Me
+            </a>
           </Link>
-          <Link href="/projects" className={styles.link}>
-            <a>Projects</a>
+          <Link href="/projects">
+            <a className={router.pathname === "/projects" ? styles.active : ""}>
+              Projects
+            </a>
           </Link>
-          <Link href="/contact" className={styles.link}>
-            <a>Contact Me</a>
+          <Link href="/contact">
+            <a className={router.pathname === "/contact" ? styles.active : ""}>
+              Contact Me
+            </a>
           </Link>
-          <Link href="/cv" className={styles.link}>
-            <a>CV</a>
+          <Link href="/cv">
+            <a className={router.pathname == "/cv" ? styles.active : ""}>CV</a>
           </Link>
         </div>
         <div className={styles.drawer}>
@@ -56,10 +65,12 @@ const Navbar = () => {
           </IconButton>
           <Drawer open={isOpen} onClose={handleDrawerClose} anchor="right">
             <List onClick={handleDrawerClose} className={styles.menu}>
-              <Button
+              <IconButton
                 className={styles.closeIcon}
                 onClick={handleDrawerClose}
-              />
+              >
+                <FontAwesomeIcon icon={faTimes} className={styles.cIcon} />
+              </IconButton>
               <ListItem className={styles.menuItems}>
                 <Link href="/">
                   <a>Home</a>
