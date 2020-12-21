@@ -1,9 +1,11 @@
-import Link from 'next/link';
-import styles from '../../styles/Drawer.module.scss';
-import { useState } from 'react';
-import { Button, Drawer, List, ListItem, IconButton } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
+import Link from "next/link";
+import styles from "../../styles/Drawer.module.scss";
+import { useState } from "react";
+import { Button, Drawer, List, ListItem, IconButton } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const DrawerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +26,9 @@ const DrawerMenu = () => {
       </IconButton>
       <Drawer open={isOpen} onClose={handleDrawerClose} anchor="right">
         <List onClick={handleDrawerClose} className={styles.menu}>
-          <CloseIcon className={styles.closeIcon} onClick={handleDrawerClose} />
+          <IconButton className={styles.closeIcon} onClick={handleDrawerClose}>
+            <FontAwesomeIcon icon={faTimes} className={styles.cIcon} />
+          </IconButton>
           <ListItem className={styles.menuItems}>
             <Link href="/">
               <a>Home</a>

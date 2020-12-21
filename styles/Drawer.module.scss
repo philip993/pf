@@ -4,28 +4,6 @@
   z-index: 1;
 }
 
-.icon {
-  color: #ec9706;
-  position: relative;
-  z-index: 1;
-  margin-right: 10%;
-
-  &:hover {
-    box-shadow: 0px 0px 5px #fff;
-  }
-}
-
-.closeIcon {
-  margin-top: 5%;
-  margin-bottom: 10%;
-  margin-left: 5%;
-  display: block;
-
-  &:hover {
-    box-shadow: 0px 0px 5px #d21404;
-  }
-}
-
 .menu {
   width: 360px;
   height: 100%;
@@ -36,8 +14,9 @@
     font-weight: bold;
     color: #ec9706;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 0%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     font-size: 1.2rem;
 
     &:hover {
@@ -46,8 +25,20 @@
     }
 
     a {
+      width: 100%;
       margin: auto;
+      padding: 5%;
       text-align: center;
+    }
+  }
+
+  .closeIcon {
+    color: #fa8072;
+    margin-left: 5%;
+
+    &:hover {
+      background: none;
+      color: #b22222;
     }
   }
 }
